@@ -1,0 +1,38 @@
+.counter_container {
+  display: flex;
+  font-size: 25px;
+  gap: 20px;
+  /* flex-direction: column; */
+  align-items: center;
+}
+
+.counter_screen {
+  background-color: teal;
+  color: white;
+  font-size: 25px;
+  flex-grow: 1;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.counter_button {
+  max-width: 250px;
+  width: 100%;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: teal;
+  color: white;
+  outline-color: transparent;
+  border-color: transparent;
+  border-radius: 4px;
+  transition: all 500ms;
+  cursor: pointer;
+}
+.counter_button:hover {
+  background-color: #008080bf;
+}
+
+.error {
+  color: red;
+}

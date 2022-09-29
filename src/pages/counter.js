@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./counter.css";
+
 function Counter() {
   const [counter, setCounter] = useState(0);
   const [message, setMessage] = useState(false);
@@ -10,13 +12,18 @@ function Counter() {
     else setCounter((state) => state - 1);
   };
   return (
-    <div>
-      <button onClick={() => toggleCounter(false)}>-</button>
-      <p>{counter}</p>
-      <button onClick={() => toggleCounter()}>+</button>
-
-      {message && <p>counter can not be less than zero</p>}
-    </div>
+    <>
+      <div className="counter_container">
+        <button className="counter_button" onClick={() => toggleCounter(false)}>
+          -
+        </button>
+        <p className="counter_screen">{counter}</p>
+        <button className="counter_button" onClick={() => toggleCounter()}>
+          +
+        </button>
+      </div>
+      {message && <p className="error">counter can not be less than zero</p>}
+    </>
   );
 }
 
